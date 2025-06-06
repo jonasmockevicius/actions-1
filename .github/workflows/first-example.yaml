@@ -9,6 +9,7 @@ jobs:
         - name: Ckeckout Repo
           uses: actions/checkout@v4
        
+
         - name: Welcome message
           run: echo "welcome! to your first action"
         
@@ -16,4 +17,4 @@ jobs:
           run: ls
 
         - name: Read File
-          run: cat ReaDME.md
+          run: cat README.md
