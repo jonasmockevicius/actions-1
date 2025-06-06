@@ -10,11 +10,18 @@ jobs:
           uses: actions/checkout@v4
        
 
-        - name: Welcome message
-          run: echo "welcome! to your first action"
-        
-        - name: List Files
-          run: ls
+        - name: List And Read Files
+          run: |
+            echo "welcome! to your first action"
+            la -la
+            cat README.md
 
-        - name: Read File
-          run: cat README.md
+
+        - name: Generate Ascii Artwork
+          run: cowsay -f dragon "Run for cover , im a Dragon......RAWR" >> dragon.txt
+          
+ #       - name: List Files
+ #         run: ls
+
+#        - name: Read File
+#          run: cat README.md
