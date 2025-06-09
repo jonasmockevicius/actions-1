@@ -14,7 +14,7 @@ jobs:
           - uses: actions/upload-artifact@v4          
             with:
               name: Dragon-Text-File
-              path: var/dragon.txt
+              path: ./dragon.txt
 
           - name: Sleep for 10 seconds
             run: sleep 10
@@ -28,7 +28,7 @@ jobs:
             uses: actions/download-artifact@v4          
             with:
               name: Dragon-Text-File
-              path: var/dragon.txt
+              path: ./dragon.txt
 
           - name: Test File Exists
             run: grep -i "Dragon" dragon.txt
@@ -42,10 +42,10 @@ jobs:
             uses: actions/download-artifact@v4         
             with:
               name: Dragon-Text-File
-              path: var/dragon.txt
+              path: ./dragon.txt
 
           - name: Read File
-            run: cat var/dragon.txt
+            run: cat ./dragon.txt
 
           - name: Deploy
             run: echo Deploying........
