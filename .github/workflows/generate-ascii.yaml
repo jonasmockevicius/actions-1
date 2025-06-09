@@ -30,6 +30,9 @@ jobs:
               name: Dragon-Text-File
               path: ./dragon.txt
 
+          - name: Read File
+            run: cat ./dragon.txt
+
           - name: Test File Exists
             run: grep -i "Dragon" dragon.txt
 
